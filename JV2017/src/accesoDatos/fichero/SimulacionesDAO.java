@@ -62,7 +62,7 @@ public class SimulacionesDAO implements OperacionesDAO, Persistente {
 	 *  @return instancia
 	 * @throws DatosException 
 	 */
-	public static SimulacionesDAO getInstancia() throws DatosException {
+	public static SimulacionesDAO getInstancia() {
 		if (instancia == null) {
 			instancia = new SimulacionesDAO();
 		}
@@ -308,6 +308,18 @@ public class SimulacionesDAO implements OperacionesDAO, Persistente {
 	public void borrarTodo() {
 		datosSimulaciones.clear();
 		cargarPredeterminados();
+	}
+
+	@Override
+	public ArrayList<Object> obtenerTodos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String listarId() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 } //class
